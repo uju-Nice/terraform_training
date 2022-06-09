@@ -5,4 +5,9 @@ resource "aws_s3_bucket" "devops_bucket" {
   versioning {
     enabled = true
   }
+
+  tags {
+    Name = "Devops-bucket"
+    Environment = "Dev"
+  }
 }
