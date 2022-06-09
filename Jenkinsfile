@@ -12,8 +12,6 @@ pipeline {
            steps{
              sh 'terraform init' 
                sh 'set +e &&  git commit -m "File update" && set -e'
-                                                            
-
            } 
         }
         stage("Terraform fmt"){
@@ -37,4 +35,7 @@ pipeline {
     }
 }
 
+    
+    
+    
     
