@@ -8,9 +8,13 @@ pipeline {
              git credentialsId: '09820cf9-0047-4f02-93d4-a31e09ce5b38', url: 'https://github.com/uju-Nice/terraform_training.git'
            }
         } 
+       
         stage("terraform init"){
            steps{
-             sh 'terraform init'  
+             sh 'terraform init' 
+               sh 'set +e &&  git commit -m "File update" && set -e'
+                                                            
+
            } 
         }
         stage("Terraform fmt"){
